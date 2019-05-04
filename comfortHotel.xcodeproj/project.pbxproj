@@ -12,6 +12,7 @@
 		2E074CD9227D2139004A1989 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E074CD7227D2139004A1989 /* Main.storyboard */; };
 		2E074CDB227D213B004A1989 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E074CDA227D213B004A1989 /* Assets.xcassets */; };
 		2E074CDE227D213B004A1989 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E074CDC227D213B004A1989 /* LaunchScreen.storyboard */; };
+		2E074CE6227D85E2004A1989 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E074CE5227D85E2004A1989 /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		2E074CDA227D213B004A1989 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E074CDD227D213B004A1989 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2E074CDF227D213B004A1989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E074CE5227D85E2004A1989 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				2E074CD3227D2139004A1989 /* AppDelegate.swift */,
 				2E074CD5227D2139004A1989 /* ViewController.swift */,
 				2E074CD7227D2139004A1989 /* Main.storyboard */,
+				2E074CE5227D85E2004A1989 /* RegisterViewController.swift */,
 				2E074CDA227D213B004A1989 /* Assets.xcassets */,
 				2E074CDC227D213B004A1989 /* LaunchScreen.storyboard */,
 				2E074CDF227D213B004A1989 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E074CE6227D85E2004A1989 /* RegisterViewController.swift in Sources */,
 				2E074CD6227D2139004A1989 /* ViewController.swift in Sources */,
 				2E074CD4227D2139004A1989 /* AppDelegate.swift in Sources */,
 			);

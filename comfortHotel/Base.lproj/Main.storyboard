@@ -129,6 +129,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Item" image="upload" id="Iq4-uu-38I">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="uploadButton:" destination="5Si-ae-jH5" id="38K-mR-cST"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -179,6 +182,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q6a-5k-UXH"/>
                     </view>
+                    <connections>
+                        <outlet property="nameTextField" destination="aiu-vg-feJ" id="d56-EJ-dt1"/>
+                        <outlet property="passwordTextField" destination="piO-3B-MbM" id="iW8-ud-AF0"/>
+                        <outlet property="usernameTextField" destination="JQf-pQ-5Gy" id="Unv-TI-ibj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXy-0X-Xn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

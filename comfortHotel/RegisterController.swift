@@ -24,6 +24,16 @@ class RegisterController: UIViewController {
         // Do any additional setup after loading the view.
     }//Main Method
     
+//  function Show Alert
+    func showAlert(title: String, message: String) -> Void {
+        
+        let objAlert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
+        objAlert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: { (action) in
+            objAlert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(objAlert, animated: true, completion: nil)
+    }
+    
     @IBAction func uploadButton(_ sender: UIBarButtonItem) {
         name = nameTextField.text
         username = userTextField.text
@@ -38,6 +48,8 @@ class RegisterController: UIViewController {
         if (name!.count == 0) || (username!.count==0) || (password!.count==0) {
 //      Have Space
             print("Have Space")
+//          call function ShowAlert
+            showAlert(title: "Have Space", message: "Please fill all every blank")
         }else{
             print("No Space")
         }

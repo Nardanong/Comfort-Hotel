@@ -127,23 +127,59 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="YHD-of-Jme"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Upload" image="upload" id="fLZ-9z-uIG">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lZQ-qk-AOa">
+                                <rect key="frame" x="57" y="124" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="irZ-Cs-h4l"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FN-cT-fnZ">
+                                <rect key="frame" x="57" y="162" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="HgJ-Ac-jPX"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pXf-YT-egn">
+                                <rect key="frame" x="57" y="200" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gvG-Za-n9r"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="leading" secondItem="q6a-5k-UXH" secondAttribute="leading" id="2WN-kv-k4v"/>
+                            <constraint firstItem="lZQ-qk-AOa" firstAttribute="top" secondItem="yX8-2E-84s" secondAttribute="bottom" constant="36" id="3y6-YM-laV"/>
+                            <constraint firstItem="pXf-YT-egn" firstAttribute="centerX" secondItem="yFc-hg-JDA" secondAttribute="centerX" id="5Eh-5G-qsE"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="top" secondItem="q6a-5k-UXH" secondAttribute="top" id="6hh-Ep-YTs"/>
                             <constraint firstItem="yX8-2E-84s" firstAttribute="trailing" secondItem="q6a-5k-UXH" secondAttribute="trailing" id="A3n-k9-wmq"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="top" secondItem="q6a-5k-UXH" secondAttribute="top" id="AVs-gq-gkO"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="leading" secondItem="q6a-5k-UXH" secondAttribute="leading" id="Ejo-8Q-FVn"/>
+                            <constraint firstItem="pXf-YT-egn" firstAttribute="top" secondItem="0FN-cT-fnZ" secondAttribute="bottom" constant="8" id="H4V-mo-6ch"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="bottom" secondItem="q6a-5k-UXH" secondAttribute="bottom" id="Mgn-8w-VCG"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="bottom" secondItem="q6a-5k-UXH" secondAttribute="bottom" id="UJI-jg-jiL"/>
+                            <constraint firstItem="lZQ-qk-AOa" firstAttribute="centerX" secondItem="yFc-hg-JDA" secondAttribute="centerX" id="UkD-ls-ov5"/>
                             <constraint firstItem="yX8-2E-84s" firstAttribute="top" secondItem="q6a-5k-UXH" secondAttribute="top" id="W7O-h3-S7c"/>
+                            <constraint firstItem="0FN-cT-fnZ" firstAttribute="top" secondItem="lZQ-qk-AOa" secondAttribute="bottom" constant="8" id="csk-g6-x3R"/>
                             <constraint firstItem="yX8-2E-84s" firstAttribute="leading" secondItem="q6a-5k-UXH" secondAttribute="leading" id="eOn-pT-i6F"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="trailing" secondItem="q6a-5k-UXH" secondAttribute="trailing" id="f1h-Tn-Lxl"/>
                             <constraint firstItem="sCX-LE-beS" firstAttribute="trailing" secondItem="q6a-5k-UXH" secondAttribute="trailing" id="k2O-Eq-ENg"/>
+                            <constraint firstItem="0FN-cT-fnZ" firstAttribute="centerX" secondItem="yFc-hg-JDA" secondAttribute="centerX" id="wsN-gI-A6T"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="q6a-5k-UXH"/>
                     </view>
@@ -156,6 +192,7 @@
     <resources>
         <image name="iconBack" width="36" height="36"/>
         <image name="logo" width="1371" height="1087.5"/>
+        <image name="upload" width="36" height="36"/>
         <image name="wallpaper" width="1000" height="1000"/>
     </resources>
 </document>

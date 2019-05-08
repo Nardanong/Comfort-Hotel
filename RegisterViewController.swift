@@ -19,7 +19,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    override func viewDidLoad() {
+    override func viewDidLoad() { 
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -38,7 +38,7 @@ class RegisterViewController: UIViewController {
         print("user ==> \(String(describing: user))")
         print("pass ==> \(String(describing: pass))")
         
-    }
+    }//upload button
     
     
 

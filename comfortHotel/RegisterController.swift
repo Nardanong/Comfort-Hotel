@@ -23,6 +23,15 @@ class RegisterController: UIViewController {
 
         // Do any additional setup after loading the view.
     }//Main Method
+
+//  Upload to Server รับค่ามาจาก - MyConstant Class
+    func uploadToServer(name: String,username: String,password: String) -> Void {
+        let myconstant = Myconstant()
+        let urlPHP:String = myconstant.findURLAddUser(name: name, username: username, password: password)
+        print("urlPHP ==> \(urlPHP)")
+        
+        
+    }
     
 //  function Show Alert
     func showAlert(title: String, message: String) -> Void {
@@ -52,6 +61,7 @@ class RegisterController: UIViewController {
             showAlert(title: "Have Space", message: "Please fill all every blank")
         }else{
             print("No Space")
+            uploadToServer(name: name!, username: username!, password: password!)
         }
         
     } //UploadButton

@@ -74,6 +74,7 @@ class RegisterController: UIViewController {
     }
     
     @IBAction func uploadButton(_ sender: UIBarButtonItem) {
+//      Get Value from TextField
         name = nameTextField.text
         username = userTextField.text
         password = passwordTextField.text

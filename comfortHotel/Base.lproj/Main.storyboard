@@ -124,7 +124,7 @@
                                         <barButtonItem key="leftBarButtonItem" title="Back" image="iconBack" id="FeD-Ty-Lvk">
                                             <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="YHD-of-Jme"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="BackMain" id="YHD-of-Jme"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Upload" image="upload" id="fLZ-9z-uIG">

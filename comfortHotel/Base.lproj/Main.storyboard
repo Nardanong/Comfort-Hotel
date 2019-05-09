@@ -64,6 +64,9 @@
                                 <state key="normal" title="Sign in">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="SinginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R6C-im-DXe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cub-Y6-OeK">
                                 <rect key="frame" x="149" y="455" width="116" height="30"/>
@@ -76,7 +79,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="5Si-ae-jH5" kind="show" id="B55-Ls-G6u"/>
+                                    <segue destination="5Si-ae-jH5" kind="show" identifier="GoRegister" id="B55-Ls-G6u"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,6 +104,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="passTextField" destination="lGe-cG-xvQ" id="KlI-q1-aAM"/>
+                        <outlet property="userTextField" destination="ZrT-sR-1gl" id="Ne3-uD-HAM"/>
+                        <segue destination="Osh-zA-4Fb" kind="show" identifier="GoService" id="BPe-TB-eIU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -195,6 +203,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OXy-0X-Xn8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="895.6521739130435" y="116.51785714285714"/>
+        </scene>
+        <!--Service-->
+        <scene sceneID="1Pe-fv-50L">
+            <objects>
+                <viewController title="Service" id="Osh-zA-4Fb" customClass="ServiceController" customModule="comfortHotel" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vHI-Mu-Gch">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="iKI-Mb-DCu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jS-uh-6Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-603" y="117"/>
         </scene>
     </scenes>
     <resources>

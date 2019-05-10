@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }//Main Method
     
-//  Check Authen
+//  Check Authen username
     func checkAuthen(user: String, password: String) -> Void {
         let myConstant = Myconstant()
         let urlPHP = myConstant.fineJSONWhereUser(user: user)
@@ -43,18 +43,46 @@ class ViewController: UIViewController {
 //          do try catch
 //          do = คือสิ่งที่ต้องทำ ส่งค่าออกมาเป็น - JSON
             do {
+//              Read Json from API
                 let jsonResponse = try JSONSerialization.jsonObject(with: dataResponse, options: [])
                 print("JSONResponse ==> \(jsonResponse)")
+                
+//              Change Json to Array
+                guard let jsonArray = jsonResponse as? [[String: Any]] else {
+                    return
+                }
+                print("JSONArray ==> \(jsonArray)")
+                
+//              Value Dictionary
+                guard let jsonDictionary: Dictionary = jsonArray[0] else {
+                    return
+                }//guard
+                print("JsonDictionary ==> \(jsonDictionary)")
+                
+//              Check value true password for json dictionary
+                let truePassword: String = jsonDictionary["password"] as! String
+                print("TruePasswords ==> \(truePassword)")
+                
+                if password == truePassword {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "GoService", sender: self)
+                    }
+                }else{
+                    DispatchQueue.main.async {
+                        self.myAlert(title: "Wrong password", message: "Please try again")
+                    }
+                }//if
             }catch let myError {
                 print(myError)
 //              ดูค่า  user  ใน database
                 print("No have user \(user) in database")
                 
-//              ขัดจังหวะการทำงานให้เลิก ทำสิ่งที่กำลังทำอยู่ แล้วให้มาทำรายการที่ 2 ก่อน ถ้าไม่ใช้ DispatchQueue จะเกิด  Error
 //              Check username in database
+//              ขัดจังหวะการทำงานให้เลิก ทำสิ่งที่กำลังทำอยู่ แล้วให้มาทำรายการที่ 2 ก่อน ถ้าไม่ใช้ DispatchQueue จะเกิด  Error
+//              จะใช้เมื่อต้องการใช้ ฟังก์ชั่น นอก trace
                 DispatchQueue.main.async {
 //                   Call use function myAlert
-                    self.myAlert(title: "User False", message: "No have user \(user) in database")
+                    self.myAlert(title: "No Username", message: "No have user \(user) in database")
                 }
             }//Do
             
@@ -80,7 +108,6 @@ class ViewController: UIViewController {
         }else{
             result = false
         }//if
-        
         return result!
         
     }//checkSpace

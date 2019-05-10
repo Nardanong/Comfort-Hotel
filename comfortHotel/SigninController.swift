@@ -64,12 +64,14 @@ class ViewController: UIViewController {
                 print("TruePasswords ==> \(truePassword)")
                 
                 if password == truePassword {
+//                  Password is correct
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "GoService", sender: self)
                     }
                 }else{
+//                  password is incorrect
                     DispatchQueue.main.async {
-                        self.myAlert(title: "Wrong password", message: "Please try again")
+                        self.myAlert(title: "Password incorrect", message: "password is incorrect please try again")
                     }
                 }//if
             }catch let myError {

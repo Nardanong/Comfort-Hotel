@@ -225,6 +225,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iKI-Mb-DCu"/>
                     </view>
+                    <connections>
+                        <outlet property="nyMapView" destination="44t-bH-CKE" id="GJt-1f-dtl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3jS-uh-6Uq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
